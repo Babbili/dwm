@@ -50,6 +50,14 @@ and (re)compiling the source code.
 
 dwm desktop file
 -------------
+
+install packages
+
+```bash
+sudo apt update && sudo apt install dmenu libx11-dev libxft-dev libxinerama-dev feh
+# download slstatus from https://tools.suckless.org/slstatus/ compile and install
+```
+
 create `dwm.desktop` file in `/usr/local/share/xsessions/` dir
 
 ```
