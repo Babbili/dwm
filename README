@@ -57,8 +57,8 @@ create `dwm.desktop` file in `/usr/local/share/xsessions/` dir
 Encoding=UTF-8
 Name=Dwm
 Comment=Dynamic Window Manager
-Exec=dwm
-# Exec=/usr/local/bin/startdwm.sh
+# Exec=dwm
+Exec=/usr/local/bin/startdwm.sh
 Icon=dwm
 Type=XSession
 ```
@@ -67,9 +67,10 @@ Type=XSession
 ```sh
 #!/bin/sh
 
+slstatus &
+
 #background
-feh --bg-scale ~/Downloads/bg.png
-dwmblocks &
+feh --bg-scale ~/Downloads/bg.png &
 
 while true; do
     # log dwm errors
