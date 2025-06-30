@@ -46,3 +46,20 @@ Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+
+dwm desktop file
+-------------
+creat `dwm.desktop` file in `/usr/local/share/xsessions/` dir
+
+```
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dwm
+Comment=Dynamic Window Manager
+Exec=dwm
+Icon=dwm
+Type=XSession
+```
+
+
