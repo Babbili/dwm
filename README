@@ -50,7 +50,7 @@ and (re)compiling the source code.
 
 dwm desktop file
 -------------
-creat `dwm.desktop` file in `/usr/local/share/xsessions/` dir
+create `dwm.desktop` file in `/usr/local/share/xsessions/` dir
 
 ```
 [Desktop Entry]
@@ -58,8 +58,25 @@ Encoding=UTF-8
 Name=Dwm
 Comment=Dynamic Window Manager
 Exec=dwm
+# Exec=/usr/local/bin/startdwm.sh
 Icon=dwm
 Type=XSession
+```
+
+`startdwm.sh`
+```sh
+#!/bin/sh
+
+#background
+feh --bg-scale ~/Downloads/bg.png
+dwmblocks &
+
+while true; do
+    # log dwm errors
+    dwm 2> ~/.dwmerr.log
+    # no error logging
+    # dwm > /dev/null 2>&1
+done
 ```
 
 
